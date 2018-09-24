@@ -15,5 +15,31 @@
         <li class="rating-item" title="Statisfied"></li>
         <li class="rating-item" title="Extremely Statisfied!"></li>
     </ul>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        var num = 2,
+            $item =  $('#rating').find('.rating-item');
+        //light on the stars
+        var fireOn = function(num) {
+                $item.each(function(index){
+                if (index < num){
+                    $(this).css('background-position','0,-38px');
+                }else{
+                    $(this).css('background-position','0,0');
+                }
+            });
+        }
+        //initial the fireOn
+        fireOn(num);
+
+        $item('mouseover',function(){
+            fireOn($(this).index()+1);
+        }).on('click',function(){
+            num = $(this).index()+1;
+        })
+    </script>
 </body>
 </html>

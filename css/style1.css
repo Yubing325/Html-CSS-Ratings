@@ -17,6 +17,6 @@ li {
     float: left;
     width: 26px;
     height: 26px;
-    background: url(/img/rating.png) no-repeat;
+    background: url(/img/star.png) no-repeat;
     cursor:pointer;
 }
